@@ -1,0 +1,3 @@
+# Force HTTPS for all visitors
+/*.xml https://:splat permanent
+/*.php https://:splat permanent

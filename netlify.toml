@@ -1,0 +1,36 @@
+# Netlify configuration for AntA static site
+# This file tells Netlify how to build and serve your static site.
+
+[build]
+  # No build command needed — the static site is pre-built and ready
+  command = ""
+  # The publish directory is the root of the unzipped folder (where index.html lives)
+  publish = "."
+
+# SPA-like fallback: serve index.html for any URL that doesn't match a file
+# (not strictly needed for this single-page site, but useful for anchor links)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache headers for static assets — improves performance
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/marketing/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
