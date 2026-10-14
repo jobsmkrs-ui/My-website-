@@ -2,10 +2,8 @@
 # This file tells Netlify how to build and serve your static site.
 
 [build]
-  # No build command needed — the static site is pre-built and ready
-  command = ""
-  # The publish directory is the root of the unzipped folder (where index.html lives)
-  publish = "."
+  command = "npm run build"
+  publish = ".next"
 
 # SPA-like fallback: serve index.html for any URL that doesn't match a file
 # (not strictly needed for this single-page site, but useful for anchor links)
