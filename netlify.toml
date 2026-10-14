@@ -6,8 +6,7 @@
   command = ""
   # The publish directory is the root of the unzipped folder (where index.html lives)
   publish = "."
-  command = "npm run build"
-  publish = ".next"
+ 
 # SPA-like fallback: serve index.html for any URL that doesn't match a file
 # (not strictly needed for this single-page site, but useful for anchor links)
 [[redirects]]
