@@ -1,3 +1,2 @@
 # Cloudflare Pages compatibility — _redirects file
-# Single-page site: serve index.html for any URL not matching a file.
-/*    /index.html   200
+# Single-page site: serve index.html for any URL not matching a file
